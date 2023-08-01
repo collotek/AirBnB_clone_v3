@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Contain index view for the API."""
+"""
+Contain index view for the API.
+"""
 from flask import jsonify
 
 from api.v1.views import app_views
@@ -14,14 +16,16 @@ from models.user import User
 
 @app_views.route('/status')
 def get_status():
-    """Gets status of the API.
+    """
+    Gets status of the API.
     """
     return jsonify(status='OK')
 
 
 @app_views.route('/stats')
 def get_stats():
-    """Get the number of objects for each type.
+    """
+    Get the number of objects for each type.
     """
     objects = {
         'amenities': Amenity,
