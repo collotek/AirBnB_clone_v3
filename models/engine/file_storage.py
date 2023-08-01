@@ -70,7 +70,10 @@ class FileStorage:
         self.reload()
 
     def get(self, cls, id):
-        """retrieve one object"""
+        """
+        retrieve one object
+        return class id or none
+        """
         if cls not in classes.values():
             return None
 
