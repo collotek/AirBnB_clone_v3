@@ -52,7 +52,9 @@ class DBStorage:
         return (new_dict)
 
     def get(self, cls, id):
-        """returns none or object retrieved"""
+        """ 
+        returns none or object retrieved
+        """
         obj = None
         if cls is not None and issubclass(cls, BaseModel):
             obj = self.__session.query(cls).filter(cls.id == id).first()
@@ -60,7 +62,9 @@ class DBStorage:
 
 
     def count(self, cls=None):
-        """retrieves the number of a class"""
+        """
+        retrieves the number of a class
+        """
         return len(self.all(cls))
 
     def new(self, obj):
